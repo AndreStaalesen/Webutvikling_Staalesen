@@ -3,9 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shoestore.no</title>
+    <title>ShoeStore.no</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://kit.fontawesome.com/772952837f.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
+    <header>
+        <i class="fa-solid fa-bars" id="meny-ikon"></i>
+        <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+        <span class="logo"><a href="index.html">ShoeStore</a></span>
+        <i class="fa-regular fa-user"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
     
+        <span class="searchBar">
+            <input type="search" name="search" placeholder="Hei! hva ser du etter?" id="search-input">
+        </span>
+    
+        <nav id="navigation">
+            <ul>
+                <li><a href="produktside.html">Herre</a></li>
+                <li><a href="produktside.html">Dame</a></li>
+                <li><a href="produktside.html">Barn</a></li>
+                <li><a href="produktside.html">tilbehør</a></li>
+                <li><a href="produktside.html">Tilbud</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+
+
+
+
+
+
+   <main>
+
+   </main>
+
+
+
+
+
+
+   <footer>
+
+   </footer>
+
+   <script>
+    const menyIkon = document.getElementById('meny-ikon');
+    const navigation = document.getElementById('navigation');
+    const searchIcon = document.getElementById('search-icon');
+    const searchInput = document.getElementById('search-input');
+    
+    // her har jeg lagd en funksjon for å toggle menyene og forhindre at begge kan åpne samtidig
+    function toggleNavigation() {
+        if (navigation.style.display === 'block') {
+            navigation.style.display = 'none';
+        } else {
+            navigation.style.display = 'block';
+            searchInput.style.display = 'none'; 
+        }
+    }
+    
+    function toggleSearch() {
+        if (searchInput.style.display === 'block') {
+            searchInput.style.display = 'none';
+        } else {
+            searchInput.style.display = 'block';
+            navigation.style.display = 'none'; 
+        }
+    }
+    
+    menyIkon.addEventListener('click', toggleNavigation);
+    searchIcon.addEventListener('click', toggleSearch);
+</script>
+
+
+
+
 </body>
 </html>

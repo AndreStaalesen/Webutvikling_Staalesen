@@ -1,0 +1,50 @@
+
+#meny-ikon {
+    display: block;
+}
+
+#search-icon {
+    display: block;
+    cursor: pointer;
+}
+
+#navigation {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #fff;
+    padding: 10px;
+}
+
+#navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+#navigation ul li {
+    margin-bottom: 10px;
+}
+
+#search-input {
+    display: none;
+}
+
+
+@media (min-width: 851px) {
+    #meny-ikon {
+        display: none;
+    }
+
+    #search-icon {
+        display: none;
+    }
+
+    #navigation {
+        display: block;
+    }
+
+    #search-input {
+        display: block;
+    }
+}
