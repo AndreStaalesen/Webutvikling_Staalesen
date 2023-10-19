@@ -1,4 +1,3 @@
-
 #meny-ikon {
     display: block;
 }
@@ -29,6 +28,11 @@
 #search-input {
     display: none;
 }
+
+.front img {
+ width: 100%;
+}
+
 
 
 @media (min-width: 851px) {
