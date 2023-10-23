@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital@1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+    font-size: 95%;
+    font-family: 'Roboto', sans-serif;
+} 
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: repeat(1, 1fr);
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+nav {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    flex-wrap: wrap;
+}
+nav ul {
+    list-style: none;
+    padding: 1rem;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+nav a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+}
+
+#searchBar {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 8rem;
+}
+#searchBar input{
+    background-color: #fff;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+h1{
+    font-family: 'Karla', sans-serif;
+    font-size: 3rem;
+
+}
+h1 a{
+    text-decoration: none;
+    color: black;
+}
+#meny-ikon {
+    padding: 1rem;
+    font-size: 2rem;
+    margin-top: 5%;
+}
+#search-icon {
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 2rem;
+    margin-top: 5%;
+   
+}
+#search-icon2 {
+    display: none;
+}
+#user-icon{
+    padding: 1rem;
+    font-size: 2rem;
+    margin-top: 20%; 
+}
+#shopping-icon{
+   padding: 1rem;
+   font-size: 2rem;
+}
+#front{
+    grid-area: main;
+    background-image: url("../img/forsidebilde.jpg"); /*https://unsplash.com/photos/unpaired-gray-nike-running-shoe-LxVxPA1LOVM*/
+    background-position: center; 
+    background-size: 160%;
+    font-size: 2rem;
+    color: #fff;   
+ }
+
+main {
+    grid-area: main;
+    background-color: #fff;
+}
+
+article{
+    padding: 1rem;
+    outline: auto;
+}
+main article img {
+    max-width: 100%;
+    max-height: 400px;
+}
+main article a {
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+
+footer {
+    grid-area: footer;
+}
+ul {
+    list-style: none;
+}
+ul li {
+    font-size: 1rem;
+}
+
+
+@media (min-width: 851px){
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+body {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+#searchBar {
+    display: block;
+    position: relative;
+    width: 45rem;
+    top: 2rem;
+}
+#searchBar input {
+    padding: 1rem;
+}
+#front{
+    height: 30rem;
+    background-size: 100%;
+ }
+.articles {
+    display: flex;
+    justify-content: space-between;
+}
+article {
+    padding: 0rem;
+}
+h3 {
+    margin-left: 1rem;
+}
+main a {
+    margin-left: 1rem;
+}
+
+footer {
+    grid-area: footer;
+    grid-column: 1 / -1;
+}
+.footerlist {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+}
+.footerlist li {
+    margin-right: 3rem;
+}
+footer h3 {
+    padding: 1rem;
+}
+#search-icon {
+    display: none;
+}
+
+#search-icon2 {
+    display: block;
+}
+#meny-ikon {
+    display: none;
+}
+}

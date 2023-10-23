@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShoeStore.no</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet.css"/>
     <script src="https://kit.fontawesome.com/772952837f.js" crossorigin="anonymous"></script>
-    
 </head>
 <body>
+    <div class="grid-container">
     <header>
         <i class="fa-solid fa-bars" id="meny-ikon"></i>
         <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
-        <span class="logo"><a href="index.html">ShoeStore</a></span>
-        <i class="fa-regular fa-user"></i>
-        <i class="fa-solid fa-cart-shopping"></i>
-    
-        <span class="searchBar">
-            <input type="search" name="search" placeholder="Hei! hva ser du etter?" id="search-input">
-        </span>
-    
-        <nav id="navigation">
+        <h1><a href="index.html">ShoeStore</a></h1>
+        <span id="searchBar">
+            <input type="search" name="search" placeholder="Hei! hva ser du etter?">
+        </span> 
+        <div id="righticons">
+        <i class="fa-regular fa-user" id="user-icon"></i>
+        <i class="fa-solid fa-cart-shopping" id="shopping-icon"></i>
+        </div>
+
+        <nav id="navigator">
             <ul>
                 <li><a href="produktside.html">Herre</a></li>
                 <li><a href="produktside.html">Dame</a></li>
@@ -30,61 +31,63 @@
             </ul>
         </nav>
     </header>
-    <div id="front">
-        <img src="img/forsidebilde.jpg" alt="forsidebilde">
-        <h2>Sjekk ut alle de nye tilbudene!</h2>
-        <a href="produktside.html">Les mer</a>
-    </div>
+    
+    
    <main>
-     <section>
-        <article>
-            <img src="img/forsidebilde3.jpg" alt="Image 1">
-            <h2>Sjekk ut de nye skoene til nike!</h2>
-            <a href="skoside.html">Les mer</a>
-        </article>
-        <article>
-            <img src="img/forsidebilde4.jpg" alt="Image 1">
-            <h2>Nye sko til skolestart?</h2>
+        <article id="front">
+            <h3>Sjekk ut alle de nye tilbudene!</h3>
             <a href="produktside.html">Les mer</a>
         </article>
-     </section>
+        <section class="articles">
+        <article id="art1">
+            <img src="img/skoafefd.jpg" alt="forsidebilde3"> <!--https://pixabay.com/photos/shoes-footwear-hiking-shoes-walking-584850/-->
+            <h3>Sjekk ut de nye skoene til nike!</h3>
+            <a href="skoside.html">Les mer</a>
+        </article>
+        <article id="art2">
+            <img src="img/forsidebilde4.jpg" alt="forsidebilde4"><!--https://pixabay.com/photos/shoes-sneakers-converse-footwear-1433925/-->
+            <h3>Nye sko til skolestart?</h3>
+            <a href="produktside.html">Les mer</a>
+        </article>
+        <article id="art3">
+            <img src="img/lobesko.jpg" alt="løpesko"><!--https://pixabay.com/photos/shoes-sports-feet-foot-346986-->
+            <h3>Joggesko for å holde farten oppe!</h3>
+            <a href="produktside.html">Les mer</a>
+        </article>
+    </section>
     </main>
-
-
-
-
-
-
+    
    <footer>
     <section>
         <article>
-            <h3>Om oss</h3>
-            <ul>
-                <li>våre butikker</li>
-                <li>Kontakt oss</li>
-                <li>FAQ</li>
-                <li>Bli med i klubben!</li>
+            <h3>Om oss:</h3>
+            <ul class="footerlist">
+                <li><a href="omoss.html">Våre butikker</a></li>
+                <li><a href="omoss.html">Kontakt oss</a></li>
+                <li><a href="omoss.html">FAQ</a></li>
+                <li><a href="omoss.html">Bli med i klubben!</a></li>
             </ul>
         </article>
 
         <article>
-            <h3>Kundeservice</h3>
-            <ul>
-                <li>Levering og retur</li>
-                <li>Kjøpsvilkår</li>
-                <li>Personvern</li>
-                <li>Informasjonskapsler</li>
+            <h3>Kundeservice:</h3>
+            <ul class="footerlist">
+                <li><a href="omoss.html">Levering og retur</a></li>
+                <li><a href="omoss.html">Kjøpsvilkår</a></li>
+                <li><a href="omoss.html">Personvern</a></li>
+                <li><a href="omoss.html">Informasjonskapsler</a></li>
             </ul>
         </article>
     </section>
-
    </footer>
+
+</div>
 
    <script>
     const menyIkon = document.getElementById('meny-ikon');
-    const navigation = document.getElementById('navigation');
+    const navigation = document.getElementById('navigator');
     const searchIcon = document.getElementById('search-icon');
-    const searchInput = document.getElementById('search-input');
+    const searchInput = document.getElementById('searchBar');
     
     // her har jeg lagd en funksjon for å toggle menyene og forhindre at begge kan åpne samtidig
     function toggleNavigation() {
