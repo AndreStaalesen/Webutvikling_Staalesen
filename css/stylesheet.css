@@ -61,22 +61,23 @@ nav a {
 
 h1{
     font-family: 'Karla', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
 
 }
+
 h1 a{
     text-decoration: none;
     color: black;
 }
 #meny-ikon {
-    padding: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    
     margin-top: 5%;
 }
 #search-icon {
     cursor: pointer;
-    padding: 1rem;
-    font-size: 2rem;
+ 
+    font-size: 1.5rem;
     margin-top: 5%;
    
 }
@@ -84,13 +85,12 @@ h1 a{
     display: none;
 }
 #user-icon{
-    padding: 1rem;
-    font-size: 2rem;
-    margin-top: 20%; 
+    font-size: 1.5rem;
+    margin-top: 40%; 
 }
 #shopping-icon{
-   padding: 1rem;
-   font-size: 2rem;
+    font-size: 1.5rem;
+    margin-left: 1rem;
 }
 #front{
     grid-area: main;
@@ -117,9 +117,11 @@ main article img {
 main article a {
     text-decoration: none;
     font-size: 1.5rem;
+    padding: 1rem;
 }
-
-
+a {
+    text-decoration: none;
+}
 footer {
     grid-area: footer;
 }
@@ -130,9 +132,35 @@ ul li {
     font-size: 1rem;
 }
 
+#prodimg {
+    max-width: 100%;
+}
 
+#storrelse {
+    outline: auto;
+    padding: 1rem;
+}
+.shopper {
+    outline: auto;
+    display: inline;
+    background-color: green;
+    padding: 1rem;
+
+}
 @media (min-width: 851px){
+nav {
+    display: flex;
+    position: relative;
+    top: auto;
+    justify-content: center;
+}
 
+nav ul li {
+    display: inline;
+    margin-left: 5rem;
+    margin-right: 5rem;
+
+}
 .grid-container {
     display: grid;
     grid-template-areas: 
@@ -145,6 +173,17 @@ body {
     margin-left: 5rem;
     margin-right: 5rem;
 }
+h1 { 
+    font-size: 4rem;
+}
+#user-icon{
+    font-size: 3rem;
+    margin-top: 40%; 
+}
+#shopping-icon{
+    font-size: 3rem;
+margin-left: 1rem;
+}
 #searchBar {
     display: block;
     position: relative;
@@ -152,6 +191,15 @@ body {
     top: 2rem;
 }
 #searchBar input {
+    padding: 1rem;
+}
+article p {
+    padding: 1rem;
+}
+article h2 {
+    padding: 1rem;
+}
+article h4 {
     padding: 1rem;
 }
 #front{
@@ -166,9 +214,6 @@ article {
     padding: 0rem;
 }
 h3 {
-    margin-left: 1rem;
-}
-main a {
     margin-left: 1rem;
 }
 
@@ -196,5 +241,17 @@ footer h3 {
 }
 #meny-ikon {
     display: none;
+}
+#product {
+    display: flex;
+    
+}
+#prodimg {
+    max-height: 60rem;
+}
+
+#omoss {
+    padding: 1rem;
+    margin-bottom: 5rem;
 }
 }
