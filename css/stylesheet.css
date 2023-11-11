@@ -168,12 +168,10 @@ table {
     background-color: #4CAF50;
     color: white;
   }
-  .analyseartikkel {
-   
+  .hidden {
+    display: none;
   }
-  .analyseartikkel img {
-  
-  }
+
 
 
 @media (min-width: 851px){
