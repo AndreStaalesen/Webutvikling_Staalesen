@@ -14,7 +14,6 @@
         <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
         <h1><a href="index.html">ShoeStore</a></h1>
         <span id="searchBar">
-          <label class="hidden" for="search">Hva kan vi hjelpe deg å finne?</label>
           <input type="search" name="search" placeholder="Hei! hva ser du etter?">
         </span> 
         <div id="righticons">
@@ -28,7 +27,6 @@
                 <li><a href="produktside.html">Dame</a></li>
                 <li><a href="produktside.html">Barn</a></li>
                 <li><a href="produktside.html">tilbehør</a></li>
-                <li><a href="produktside.html">Tilbud</a></li>
                 <li><a href="analyse.html">ANALYSE</a></li>
             </ul>
         </nav>
@@ -36,7 +34,7 @@
     
    <main>
     <section>
-      <article>
+      <article class="analyseartikkel">
         <h2>Google trends Keywords</h2>
         <p>Ved hjelp av google trends har jeg funnet noen av de mest populære nøkkelordene til siden min. Disse søkene er hentet kun i Norge. Nøkkelordene er valgt basert på typen skobutikk, og hva som er relevant nå. Noen av søkeordene ser man hele året, mens noen av dem er relevante spesifikke tidsperioder. «Black Friday» og «Vintersko» er veldig populære for tiden, mens tursko og løpesko har mye mindre søk på denne tiden av året. </p>
         <img src="./analyse_img/googletrends.PNG" alt="Bilde an nøkkelord fra google trends">
@@ -136,6 +134,30 @@
           </tr>
         </tbody>
         </table>
+      </section>
+
+      <section>
+        <h2>Forbedrende tiltak</h2>
+        <article class="analyseartikkel">
+          <h3>SEO tiltak</h3>
+          <p>For SEO var det bare en error, «Missing meta description». Dette fikset jeg med å legge til en ekstra Meta tag med siden sitt navn og beskrivelse. Ved hjelp av dette fikk jeg SEO score til 100. </p>
+          <img src="analyse_img/changedSEO.PNG" alt="bilde av SEO score fra lighthouse etter tiltak">
+        </article>
+        <article class="analyseartikkel">
+          <h3>UU Tiltak - Missing form label</h3>
+          <p>Det første UU problemet jeg prøvde å fikse var den «Missing form label». Denne feilen kommer fordi input feltet som blir brukt som search bar, ikke har noen label, WAVE verktøyet mener at dette vil gjøre UU svakere siden det lager problemer for skjermlesere. Etter å ha testet tastaturnavigasjon og skjermleser, viste det seg at placeholder teksten i feltet fungerer slik denne labelen burde. Jeg har derfor valgt å la søkefeltet være foreløpig. Vedlagt er ett løsningsforslagene jeg testet. </p>
+          <img src="analyse_img/change1label.PNG" alt="">
+        </article>
+        <article class="analyseartikkel">
+          <h3>UU tiltak - Skipped heading level</h3>
+          <p>Siden fikk også en feil angående bruken av H-tags, her har jeg omstrukturert litt og prøvd å bruke heading level tags for best mulig semantikk. Før og etter test med skjermleser viste også en forbedring. </p>
+          <img src="analyse_img/change2htags.PNG" alt="Bilde av en endret Heading tag">
+        </article>
+        <article class="analyseartikkel">
+          <h3>UU tiltak - Contrast error</h3>
+          <p>En annen kritisk UU feil var kontrasten mellom banner tekst, og bakgrunnsbilde. For å fikse dette endret jeg fargen på teksten.  </p>
+          <img src="analyse_img/change3contrast.PNG" alt="Bilde av fikset kontrastfeil">
+        </article>
       </section>
     </main>
     
