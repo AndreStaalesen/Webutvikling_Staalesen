@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoeStore.no</title>
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet.css"/>
+    <script src="https://kit.fontawesome.com/772952837f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="grid-container">
+    <header>
+        <i class="fa-solid fa-bars" id="meny-ikon"></i>
+        <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+        <h1><a href="index.html">ShoeStore</a></h1>
+        <span id="searchBar">
+            <input type="search" name="search" placeholder="Hei! hva ser du etter?">
+        </span> 
+        <div id="righticons">
+        <i class="fa-regular fa-user" id="user-icon"></i>
+        <i class="fa-solid fa-cart-shopping" id="shopping-icon"></i>
+        </div>
+
+        <nav id="navigator">
+            <ul>
+                <li><a href="produktside.html">Herre</a></li>
+                <li><a href="produktside.html">Dame</a></li>
+                <li><a href="produktside.html">Barn</a></li>
+                <li><a href="produktside.html">tilbehør</a></li>
+                <li><a href="produktside.html">Tilbud</a></li>
+                <li><a href="analyse.html">ANALYSE</a></li>
+            </ul>
+    
+        </nav>
+    </header>
+    
+   <main>
+    <section>
+      <article>
+        <h2>Google trends Keywords</h2>
+        <p>Ved hjelp av google trends har jeg funnet noen av de mest populære nøkkelordene til siden min. Disse søkene er hentet kun i Norge. Nøkkelordene er valgt basert på typen skobutikk, og hva som er relevant nå. Noen av søkeordene ser man hele året, mens noen av dem er relevante spesifikke tidsperioder. «Black Friday» og «Vintersko» er veldig populære for tiden, mens tursko og løpesko har mye mindre søk på denne tiden av året. </p>
+        <img src="./analyse_img/googletrends.PNG" alt="Bilde an nøkkelord fra google trends">
+      </article>
+    </section>
+
+    <section>
+      <article class="analyseartikkel">
+        <h2>SEO analyse</h2>
+        <p>For å sjekke SEO på siden har jeg brukt lighthouse analyse verktøyet. På SEO delen scoret forsiden og sko siden med 92, og om oss siden med 91. Det er en felles feil på alle og her får jeg beskjed om at det mangler mangler meta description. Grunnen til at den siste siden scoret med ett poeng mindre, var fordi de to andre sidene hadde fått ett pluss poeng relatert til bildene. </p>
+        <img src="./analyse_img/SEOfrontpage.PNG" alt="bilde av SEO score"> 
+      </article>
+    </section>
+
+    <section>
+      <article class="analyseartikkel">
+        <h2>UU - Accessibility</h2>
+        <h3>Front page</h3>
+        <p>På forsiden fikk jeg en rød error, en contrast error og 16 oransje alerts. Erroren jeg fikk var for en manglende label til min form, som blir brukt som søkefelt. Contrast error peker på teksten på banneret, det er for dårlig kontrast mellom tekst og bakgrunn og dette kan føre til problemer for eksempel svaksynte. 
+          Den første oransje varslingen er for en skipped heading level, her har jeg tatt i bruk h1, og h3, uten å bruke h2 noe sted. De 15 andre varslene er alle for redundant links, dette skjer fordi mange linker går til samme url, men dette er formålet i akkurat denne oppgaven, så disse varslingene vil bli ignorert. 
+          </p>
+        <img src="./analyse_img/UUfrontpage2.PNG" alt="bilde av WEBAIM analyseverktøyet sine resultater for front page">
+        <h3>Produktside </h3>
+        <p>På produktsiden er det mye av det samme, siden header og footer er identisk på alle sidene. Her ser vi igjen rød error for form, skipped heading level og redundant links. I tillegg til disse har vi to nye contrast errors. Disse tar for seg «klikk og hent» og «handlekurv» knappene, som jeg i ettertid kan se at har dårlig kontrast. </p>
+        <img src="./analyse_img/UUproductpage.PNG" alt="bilde av WEBAIM analyseverktøyet sine resultater for produktside">
+        <h3>Om oss side</h3>
+        <p>På den siste siden, har vi kun de samme feilene fra header og footer: form, skipped heading level og redundant links. Siden denne siden er relativt simpel i forhold til de andre, er det ingen nye feil her. </p>
+      </article>
+      <article class="analyseartikkel">
+        <h2>CHATGPT analyse</h2>
+        <img src="./analyse_img/chatgpt1.PNG" alt="bilde av analyse resultatene til chatgpt">
+        <img src="./analyse_img/chatgpt2.PNG" alt="bilde av analyse resultatene til chatgpt">
+      </article>
+    </section>
+
+
+    
+    <section>
+    <h2>Sammenligning av resultater</h2>
+    <table>
+        <thead>
+          <tr>
+            <th>Kommentarer</th>
+            <th>WEBAIM</th>
+            <th>LIGHTHOUSE</th>
+            <th>CHATGPT</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Manglende form label</td>
+            <td>JA</td>
+            <td>NEI</td>
+            <td>NEI</td>
+          </tr>
+          <tr>
+            <td>Contrast error</td>
+            <td>JA</td>
+            <td>NEI</td>
+            <td>JA</td>
+          </tr>
+          <tr>
+            <td>Ikoner uten beskrivelse</td>
+            <td>NEI</td>
+            <td>NEI</td>
+            <td>JA</td>
+          </tr>
+          <tr>
+            <td>Skipped heading level</td>
+            <td>JA</td>
+            <td>JA</td>
+            <td>NEI</td>
+          </tr>
+          <tr>
+            <td>Redundant links</td>
+            <td>JA</td>
+            <td>NEI</td>
+            <td>NEI</td>
+          </tr>
+          <tr>
+            <td>Meta description</td>
+            <td>JA</td>
+            <td>JA</td>
+            <td>JA</td>
+          </tr>
+          <tr>
+            <td>Bedre alt tekst</td>
+            <td>NEI</td>
+            <td>NEI</td>
+            <td>JA</td>
+          </tr>
+          <tr>
+            <td>Nøkkelord for SEO</td>
+            <td>NEI</td>
+            <td>NEI</td>
+            <td>JA</td>
+          </tr>
+        </tbody>
+        </table>
+      </section>
+    </main>
+    
+    <footer>
+        <section>
+            <article>
+                <h3>Om oss:</h3>
+                <ul class="footerlist">
+                    <li><a href="omoss.html">Våre butikker</a></li>
+                    <li><a href="omoss.html">Kontakt oss</a></li>
+                    <li><a href="omoss.html">FAQ</a></li>
+                    <li><a href="omoss.html">Bli med i klubben!</a></li>
+                </ul>
+                <h3>Kundeservice:</h3>
+                <ul class="footerlist">
+                    <li><a href="omoss.html">Levering og retur</a></li>
+                    <li><a href="omoss.html">Kjøpsvilkår</a></li>
+                    <li><a href="omoss.html">Personvern</a></li>
+                    <li><a href="omoss.html">Informasjonskapsler</a></li>
+                </ul>           
+            </article>
+        </section>
+       </footer>
+</div>
+
+   <script>
+    const menyIkon = document.getElementById('meny-ikon');
+    const navigation = document.getElementById('navigator');
+    const searchIcon = document.getElementById('search-icon');
+    const searchInput = document.getElementById('searchBar');
+    
+    // her har jeg lagd en funksjon for å toggle menyene og forhindre at begge kan åpne samtidig
+    function toggleNavigation() {
+        if (navigation.style.display === 'block') {
+            navigation.style.display = 'none';
+        } else {
+            navigation.style.display = 'block';
+            searchInput.style.display = 'none'; 
+        }
+    }
+    
+    function toggleSearch() {
+        if (searchInput.style.display === 'block') {
+            searchInput.style.display = 'none';
+        } else {
+            searchInput.style.display = 'block';
+            navigation.style.display = 'none'; 
+        }
+    }
+    
+    menyIkon.addEventListener('click', toggleNavigation);
+    searchIcon.addEventListener('click', toggleSearch);
+</script>
+
+
+
+
+</body>
+</html>
