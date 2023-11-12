@@ -1,27 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb" itemscope itemtype="http://schema.org/WebPage">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShoeStore.no</title>
+    <meta itemprop="name" content="ShoeStore.no">
+    <meta itemprop="image" content="img/prod1.jpg">
+    <meta itemprop="description" content="ShoeStore.no landingsside">
+    <meta itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+    <meta itemprop="price" content="1799.00">
+    <meta itemprop="priceCurrency" content="NOK">
+    <title>ShoeStore.no</title> 
+
+    <meta name="keywords" content="Sko, Reebok, Vintersko, New Balance, Black Friday">
+    
+    <meta property="og:title" content="Coool nice shoe" />
+    <meta property="og:description" content="Coool shoes fra nice, kun 1799!" />
+    <meta property="og:image" content="bilde av skoen.png" />
+    <meta property="og:url" content="https://www.ShoeStore.no/product/cooolshoe" />
+    <meta property="og:type" content="website" />
+
     <link rel="stylesheet" type="text/css" href="/css/stylesheet.css"/>
     <script src="https://kit.fontawesome.com/772952837f.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body itemprop="mainContentOfPage">
     <div class="grid-container">
     <header>
-        <i class="fa-solid fa-bars" id="meny-ikon"></i>
-        <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
-        <h1><a href="index.html">ShoeStore</a></h1>
-        <span id="searchBar">
-            <input type="search" name="search" placeholder="Hei! hva ser du etter?">
+        <i class="fa-solid fa-bars" id="meny-ikon" role="button" aria-label="Åpne meny"></i>
+        <i class="fa-solid fa-magnifying-glass" id="search-icon" role="button" aria-label="Åpne søk"></i>
+        <h1><a href="index.html" aria-label="logo">ShoeStore</a></h1>
+        <span id="searchBar" role="search" aria-labelledby="search-icon">
+            <input type="search" name="search" placeholder="Hei! hva ser du etter?" >
         </span> 
         <div id="righticons">
-        <i class="fa-regular fa-user" id="user-icon"></i>
-        <i class="fa-solid fa-cart-shopping" id="shopping-icon"></i>
-        </div>
-
-        <nav id="navigator">
+        <i class="fa-regular fa-user" id="user-icon" role="button" aria-label="Brukerprofil"></i>
+        <i class="fa-solid fa-cart-shopping" id="shopping-icon" role="button" aria-label="Handlekurv"></i>
+    </div>
+    <a href="#main-content" class="skiplink">Skip to main content</a>
+        <nav id="navigator" role="navigation">
             <ul>
                 <li><a href="produktside.html">Herre</a></li>
                 <li><a href="produktside.html">Dame</a></li>
@@ -33,22 +48,26 @@
     </header>
     
     
-    <main>
+    <main id="main-content">
         <article class="breadcrumbs"><a href="index.html">Hjem</a> >  herrre >  sneakers >  Coool nice shoes</article>
         <div id="product">
             
-            <img id="prodimg" src="img/prod1.jpg" alt="produktbilde">   
+            <img id="prodimg" src="img/prod1.jpg" alt="Hvit high top sko med røde detaljer" property="image">   
         
-            <article>
+            <article vocab="https://schema.org/" typeof="Product">
             
-                <h2>Coool nice shoe</h2>
-                <p>1799,00 NOK</p>
+                <h2 property="name">Coool nice shoe</h2>
+                <p property="price">1799,00 NOK</p>
                 <p>Farge: hvit</p>
                 <p id="storrelse">Velg størrelse</p>
                 <p class="shopper">Klikk og hent</p>
                 <p class="shopper">Legg i handlekurv</p>
                 <h4>Bekrivelse:</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div id="rating" property="aggregateRating" 
+                typeof="AggregateRating"> Rated 
+                <span property="ratingValue">3.5</span>/5 based on <span property="reviewCount">11</span> customer reviews
+                </div>
+                <p property="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     
             </article>
 

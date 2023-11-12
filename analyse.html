@@ -1,27 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShoeStore.no</title>
+    <meta name="description" content="ShoeStore.no landingsside">
+    <title>ShoeStore.no</title> 
+
+    <meta name="keywords" content="ShoeStore.no, Analyse, SEO, UU, Metadata, Lighthouse">
+   
+   	<meta property="og:title" content="Analyseside" />
+    <meta property="og:description" content="Analyseside for ShoeStore.no med vurdering av SEO, UU og mye mer." />
+  	<meta property="og:image" content="logo.png" />
+  	<meta property="og:url" content="https://www.ShoeStore.no/analyse" />
+   	<meta property="og:type" content="website" />
+
     <link rel="stylesheet" type="text/css" href="/css/stylesheet.css"/>
     <script src="https://kit.fontawesome.com/772952837f.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="grid-container">
     <header>
-        <i class="fa-solid fa-bars" id="meny-ikon"></i>
-        <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
-        <h1><a href="index.html">ShoeStore</a></h1>
-        <span id="searchBar">
-          <input type="search" name="search" placeholder="Hei! hva ser du etter?">
+        <i class="fa-solid fa-bars" id="meny-ikon" role="button" aria-label="Åpne meny"></i>
+        <i class="fa-solid fa-magnifying-glass" id="search-icon" role="button" aria-label="Åpne søk"></i>
+        <h1><a href="index.html" aria-label="logo">ShoeStore</a></h1>
+        <span id="searchBar" role="search" aria-labelledby="search-icon">
+            <input type="search" name="search" placeholder="Hei! hva ser du etter?" >
         </span> 
         <div id="righticons">
-        <i class="fa-regular fa-user" id="user-icon"></i>
-        <i class="fa-solid fa-cart-shopping" id="shopping-icon"></i>
-        </div>
-
-        <nav id="navigator">
+        <i class="fa-regular fa-user" id="user-icon" role="button" aria-label="Brukerprofil"></i>
+        <i class="fa-solid fa-cart-shopping" id="shopping-icon" role="button" aria-label="Handlekurv"></i>
+    </div>
+    <a href="#main-content" class="skiplink">Skip to main content</a>
+        <nav id="navigator" role="navigation">
             <ul>
                 <li><a href="produktside.html">Herre</a></li>
                 <li><a href="produktside.html">Dame</a></li>
@@ -32,7 +42,7 @@
         </nav>
     </header>
     
-   <main>
+   <main id="main-content">
     <section>
       <article class="analyseartikkel">
         <h2>Google trends Keywords</h2>
@@ -157,6 +167,22 @@
           <h3>UU tiltak - Contrast error</h3>
           <p>En annen kritisk UU feil var kontrasten mellom banner tekst, og bakgrunnsbilde. For å fikse dette endret jeg fargen på teksten.  </p>
           <img src="analyse_img/change3contrast.PNG" alt="Bilde av fikset kontrastfeil">
+        </article>
+      </section>
+      <section>
+        <h2>Tilgjengelighet</h2>
+        <article>
+          <h3>Skjermleser</h3>
+          <p>Det første problemet jeg støtte på med skjermleseren dukker opp når man først aktiverer den. Da begynner narratoren å lese, og den fortsetter automatisk, ganske fort. Når jeg trykker TAB en gang, stopper den, og virker greit sammen med tastaturnavigasjon videre. </p>
+          <p>Ett problem som også dukker opp, er i artiklene på forsiden. Istedenfor å lese opp teksten, leser narratoren naturligvis opp lenkene med teksten «les mer», disse artiklene er så så godt som ubrukelige for en blind bruker. Det samme gjelder noen av bildene som ble lagt til tidligere i oppgaven, flere av disse kunne trengt en bedre beskrivelse. </p>
+          <p>Jeg har også lagt merke til ett behov for ARIA tags. Selv om jeg selv kunne navigert siden slik den er, vil det utvilsomt bli en utfordring for noen som ikke er kjent med innholdet. Mye av innholdet burde ha bedre beskrivelser slik at de som bruker narrator og tastatur også kan ha en behagelig opplevelse med siden.  For å gjøre testen litt mer interessant fikk jeg en medstudent som ikke var kjent med nettsidens innhold, til å prøve å navigere den uten å se. </p>
+          <p>På dette punktet i oppgaven blir det veldig tydelig hvorfor man burde bruke semantiske tags som header, nav, footer og article, istedenfor for eksempel div og span. God semantikk er viktig når man skal implementere god universell utforming. 
+            For denne oppgaven har jeg testet med Windows Narrator, men for ett kommersielt prosjekt ville jeg definitivt testet med flere av de mest brukte skjermleserene for å luke ut alle eventuelle problemer. 
+          </p>
+        </article>
+        <article>
+          <h3>Tastaturnavigasjon</h3>
+          <p>På grunn av den enkle oppbygningen til shoestore er tastaturnnavigasjonen ganske bra. Man kan navigere hele siden veldig enkelt, uten noen problemer. For enda bedre tilgjengelighet har jeg lagt til en «skip to main content» knapp. Selv om bra skjermleser og tastaturnavigasjon er viktig for god UU, er målet å gjøre browsingen så effektiv og tilgjengelig som mulig for alle. </p>
         </article>
       </section>
     </main>

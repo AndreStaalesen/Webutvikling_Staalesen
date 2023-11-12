@@ -1,27 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShoeStore.no</title>
+    <meta name="description" content="ShoeStore.no landingsside">
+    <title>ShoeStore.no</title> 
+    <meta name="keywords" content="ShoeStore.no, Om oss, FAQ, Kundeklubb, Kjøpsvilkår">
+
+   	<meta property="og:title" content="Shoestore.no hjem" />
+    <meta property="og:description" content="ShoeStore.no Norges beste skobutikk!" />
+ 	<meta property="og:image" content="shoeestorelogo.png" />
+  	<meta property="og:url" content="https://www.ShoeStore.no/OmOss" />
+   	<meta property="og:type" content="website" />
+
     <link rel="stylesheet" type="text/css" href="/css/stylesheet.css"/>
     <script src="https://kit.fontawesome.com/772952837f.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="grid-container">
     <header>
-        <i class="fa-solid fa-bars" id="meny-ikon"></i>
-        <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
-        <h1><a href="index.html">ShoeStore</a></h1>
-        <span id="searchBar">
-            <input type="search" name="search" placeholder="Hei! hva ser du etter?">
+        <i class="fa-solid fa-bars" id="meny-ikon" role="button" aria-label="Åpne meny"></i>
+        <i class="fa-solid fa-magnifying-glass" id="search-icon" role="button" aria-label="Åpne søk"></i>
+        <h1><a href="index.html" aria-label="logo">ShoeStore</a></h1>
+        <span id="searchBar" role="search" aria-labelledby="search-icon">
+            <input type="search" name="search" placeholder="Hei! hva ser du etter?" >
         </span> 
         <div id="righticons">
-        <i class="fa-regular fa-user" id="user-icon"></i>
-        <i class="fa-solid fa-cart-shopping" id="shopping-icon"></i>
-        </div>
-
-        <nav id="navigator">
+        <i class="fa-regular fa-user" id="user-icon" role="button" aria-label="Brukerprofil"></i>
+        <i class="fa-solid fa-cart-shopping" id="shopping-icon" role="button" aria-label="Handlekurv"></i>
+    </div>
+    <a href="#main-content" class="skiplink">Skip to main content</a>
+        <nav id="navigator" role="navigation">
             <ul>
                 <li><a href="produktside.html">Herre</a></li>
                 <li><a href="produktside.html">Dame</a></li>
@@ -33,7 +42,7 @@
     </header>
     
     
-   <main>
+   <main id="main-content">
         <article id="omoss"> <h2>Om oss</h2>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Auctor neque vitae tempus quam. Non diam phasellus vestibulum lorem sed. Eget nunc lobortis mattis aliquam faucibus purus in. Mi quis hendrerit dolor magna eget est lorem ipsum. Lorem ipsum dolor sit amet consectetur adipiscing elit. Nisl nisi scelerisque eu ultrices. Aliquet sagittis id consectetur purus ut. Vestibulum sed arcu non odio euismod. Bibendum neque egestas congue quisque. Quisque non tellus orci ac auctor augue. Quis varius quam quisque id diam vel quam elementum pulvinar. Lectus quam id leo in vitae turpis massa sed. Tristique et egestas quis ipsum. Mi in nulla posuere sollicitudin aliquam. Tortor consequat id porta nibh venenatis cras.
 

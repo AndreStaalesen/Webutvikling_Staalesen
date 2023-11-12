@@ -171,8 +171,16 @@ table {
     display: none;
   }
 
+  .skiplink:focus {
+    top: 0;
+}
 
-
+.skiplink:focus-visible {
+    outline: 2px solid #fff;
+}
+#rating {
+    padding: 1rem;
+}
 @media (min-width: 851px){
 nav {
     display: flex;
